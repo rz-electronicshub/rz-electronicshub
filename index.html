@@ -6,102 +6,431 @@
   <meta name="description" content="RZ Electronicshub - Electronics, accessories and smart gadgets.">
   <title>RZ Electronicshub | Premium Electronics</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .product-gallery {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 18px;
+      margin-bottom: 10px;
+      background: #f5f5f5;
+    }
+
+    .product-gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      display: none;
+    }
+
+    .product-gallery img.active {
+      display: block;
+    }
+
+    .gallery-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 10px 0 15px;
+    }
+
+    .gallery-buttons button {
+      border: 0;
+      background: #222;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .product-price {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 12px 0 8px;
+    }
+
+    .colours {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="navbar">
-    <a class="logo" href="#">RZ <span>Electronicshub</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#categories">Categories</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-btn" href="https://wa.me/917383870089" target="_blank">WhatsApp</a>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">RZ ELECTRONICSHUB</p>
-        <h1>Premium Gadgets.<br><span>Smart Prices.</span></h1>
-        <p class="hero-text">Explore trending earbuds, headphones, smart watches, power banks and more.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#shop">Explore Products</a>
-          <a class="btn secondary" href="https://wa.me/917383870089?text=Hi%20RZ%20Electronicshub,%20I%20want%20to%20know%20about%20your%20products." target="_blank">DM for Price</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="orb"></div>
-        <div class="product-placeholder">RZ<br><small>ELECTRONICSHUB</small></div>
-      </div>
-    </section>
+<header class="navbar">
 
-    <section id="categories" class="section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">EXPLORE</p>
-          <h2>Shop by Category</h2>
-        </div>
-      </div>
-      <div class="category-grid">
-        <div class="category-card">🎧<h3>Earbuds</h3><p>Wireless audio</p></div>
-        <div class="category-card">⌚<h3>Smart Watches</h3><p>Smart & stylish</p></div>
-        <div class="category-card">🔊<h3>Headphones</h3><p>Immersive sound</p></div>
-        <div class="category-card">🔋<h3>Power Banks</h3><p>Power on the go</p></div>
-      </div>
-    </section>
+  <a class="logo" href="#">
+    RZ <span>Electronicshub</span>
+  </a>
 
-    <section id="shop" class="section products-section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">FEATURED</p>
-          <h2>Trending Products</h2>
-        </div>
-        <span class="availability">DM for price & availability</span>
-      </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-image">🎧</div>
-          <h3>Premium Earbuds</h3>
-          <p>Wireless • Compact • Everyday audio</p>
-          <a href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Premium%20Earbuds." target="_blank">Enquire on WhatsApp →</a>
-        </article>
-        <article class="product-card">
-          <div class="product-image">⌚</div>
-          <h3>Smart Watch</h3>
-          <p>Modern design • Smart features</p>
-          <a href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Smart%20Watch." target="_blank">Enquire on WhatsApp →</a>
-        </article>
-        <article class="product-card">
-          <div class="product-image">🔊</div>
-          <h3>Wireless Headphones</h3>
-          <p>Powerful sound • Stylish finish</p>
-          <a href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Wireless%20Headphones." target="_blank">Enquire on WhatsApp →</a>
-        </article>
-      </div>
-    </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="cta">
-      <p class="eyebrow">READY TO ORDER?</p>
-      <h2>Find your next gadget with RZ Electronicshub.</h2>
-      <p>Price and availability ke liye WhatsApp par message karo.</p>
-      <a class="btn primary" href="https://wa.me/917383870089" target="_blank">Chat on WhatsApp</a>
-    </section>
-  </main>
+  <a class="nav-btn"
+     href="https://wa.me/917383870089"
+     target="_blank">
+    WhatsApp
+  </a>
 
-  <footer id="contact">
-    <div>
-      <a class="logo" href="#">RZ <span>Electronicshub</span></a>
-      <p>Electronics • Accessories • Smart Gadgets</p>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">RZ ELECTRONICSHUB</p>
+
+      <h1>
+        Premium Gadgets.<br>
+        <span>Smart Prices.</span>
+      </h1>
+
+      <p class="hero-text">
+        Explore trending earbuds, headphones, smart watches,
+        power banks and more.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn primary" href="#shop">
+          Explore Products
+        </a>
+
+        <a class="btn secondary"
+           href="https://wa.me/917383870089?text=Hi%20RZ%20Electronicshub,%20I%20want%20to%20know%20about%20your%20products."
+           target="_blank">
+          DM for Price
+        </a>
+
+      </div>
+
     </div>
-    <div class="footer-contact">
-      <a href="tel:+917383870089">7383870089</a>
-      <a href="tel:+917041370853">7041370853</a>
-      <a href="https://instagram.com/rz_electronicshub" target="_blank">@rz_electronicshub</a>
-    </div>
-    <p class="copyright">© 2026 RZ Electronicshub. All rights reserved.</p>
-  </footer>
 
-  <script src="script.js"></script>
+
+    <div class="hero-card">
+
+      <div class="orb"></div>
+
+      <div class="product-placeholder">
+        RZ<br>
+        <small>ELECTRONICSHUB</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section id="categories" class="section">
+
+    <div class="section-head">
+
+      <div>
+        <p class="eyebrow">EXPLORE</p>
+        <h2>Shop by Category</h2>
+      </div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        🎧
+        <h3>Earbuds</h3>
+        <p>Wireless audio</p>
+      </div>
+
+      <div class="category-card">
+        ⌚
+        <h3>Smart Watches</h3>
+        <p>Smart & stylish</p>
+      </div>
+
+      <div class="category-card">
+        🔊
+        <h3>Headphones</h3>
+        <p>Immersive sound</p>
+      </div>
+
+      <div class="category-card">
+        🔋
+        <h3>Power Banks</h3>
+        <p>Power on the go</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+
+  <section id="shop" class="section products-section">
+
+    <div class="section-head">
+
+      <div>
+        <p class="eyebrow">FEATURED</p>
+        <h2>Trending Products</h2>
+      </div>
+
+      <span class="availability">
+        DM for price & availability
+      </span>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <!-- ONEPLUS BUDS 4 -->
+
+      <article class="product-card">
+
+        <div class="product-gallery">
+
+          <img src="oneplus-buds-4-1.jpg"
+               alt="OnePlus Buds 4"
+               class="active"
+               id="oneplus-img-1">
+
+          <img src="oneplus-buds-4-2.jpg"
+               alt="OnePlus Buds 4"
+               id="oneplus-img-2">
+
+          <img src="oneplus-buds-4-3.jpg"
+               alt="OnePlus Buds 4"
+               id="oneplus-img-3">
+
+        </div>
+
+
+        <div class="gallery-buttons">
+
+          <button onclick="showOnePlusImage(1)">1</button>
+          <button onclick="showOnePlusImage(2)">2</button>
+          <button onclick="showOnePlusImage(3)">3</button>
+
+        </div>
+
+
+        <h3>OnePlus Buds 4</h3>
+
+        <p>
+          Premium Wireless Earbuds • Clear Sound • Stylish Design
+        </p>
+
+
+        <div class="product-price">
+          ₹600
+        </div>
+
+
+        <div class="colours">
+
+          <strong>Available Colours:</strong><br>
+
+          Black • Deep Grey • Zen Green
+
+        </div>
+
+
+        <a
+          href="https://wa.me/917383870089?text=Hi%20RZ%20Electronicshub,%20I%20am%20interested%20in%20OnePlus%20Buds%204%20for%20%E2%82%B9600."
+          target="_blank">
+
+          Enquire on WhatsApp →
+
+        </a>
+
+      </article>
+
+
+      <!-- PREMIUM EARBUDS -->
+
+      <article class="product-card">
+
+        <div class="product-image">
+          🎧
+        </div>
+
+        <h3>Premium Earbuds</h3>
+
+        <p>
+          Wireless • Compact • Everyday audio
+        </p>
+
+        <a
+          href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Premium%20Earbuds."
+          target="_blank">
+
+          Enquire on WhatsApp →
+
+        </a>
+
+      </article>
+
+
+      <!-- SMART WATCH -->
+
+      <article class="product-card">
+
+        <div class="product-image">
+          ⌚
+        </div>
+
+        <h3>Smart Watch</h3>
+
+        <p>
+          Modern design • Smart features
+        </p>
+
+        <a
+          href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Smart%20Watch."
+          target="_blank">
+
+          Enquire on WhatsApp →
+
+        </a>
+
+      </article>
+
+
+      <!-- HEADPHONES -->
+
+      <article class="product-card">
+
+        <div class="product-image">
+          🔊
+        </div>
+
+        <h3>Wireless Headphones</h3>
+
+        <p>
+          Powerful sound • Stylish finish
+        </p>
+
+        <a
+          href="https://wa.me/917383870089?text=Hi,%20I%20am%20interested%20in%20Wireless%20Headphones."
+          target="_blank">
+
+          Enquire on WhatsApp →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <p class="eyebrow">
+      READY TO ORDER?
+    </p>
+
+    <h2>
+      Find your next gadget with RZ Electronicshub.
+    </h2>
+
+    <p>
+      Price and availability ke liye WhatsApp par message karo.
+    </p>
+
+    <a class="btn primary"
+       href="https://wa.me/917383870089"
+       target="_blank">
+
+      Chat on WhatsApp
+
+    </a>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+  <div>
+
+    <a class="logo" href="#">
+      RZ <span>Electronicshub</span>
+    </a>
+
+    <p>
+      Electronics • Accessories • Smart Gadgets
+    </p>
+
+  </div>
+
+
+  <div class="footer-contact">
+
+    <a href="tel:+917383870089">
+      7383870089
+    </a>
+
+    <a href="tel:+917041370853">
+      7041370853
+    </a>
+
+    <a href="https://instagram.com/rz_electronicshub"
+       target="_blank">
+      @rz_electronicshub
+    </a>
+
+  </div>
+
+
+  <p class="copyright">
+    © 2026 RZ Electronicshub. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+function showOnePlusImage(number) {
+
+  document
+    .querySelectorAll('.product-gallery img')
+    .forEach(function(img) {
+      img.classList.remove('active');
+    });
+
+  document
+    .getElementById('oneplus-img-' + number)
+    .classList.add('active');
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
