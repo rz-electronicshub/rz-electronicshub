@@ -266,20 +266,35 @@
 
   <div class="product-gallery">
 
-    <img src="boat-181-pro-1.jpg.png.jpg"
+    <img src="boat-181-pro-1.jpg.png"
          alt="boAt Airdopes 181 Pro"
-         class="active">
+         class="active"
+         id="boat-img-1">
 
-    <img src="boat-181-pro-2.jpg.png.jpg"
-         alt="boAt Airdopes 181 Pro">
+    <img src="boat-181-pro-2.jpg.png"
+         alt="boAt Airdopes 181 Pro"
+         id="boat-img-2">
 
-    <img src="boat-181-pro-3.jpg.png.jpg"
-         alt="boAt Airdopes 181 Pro">
+    <img src="boat-181-pro-3.jpg.png"
+         alt="boAt Airdopes 181 Pro"
+         id="boat-img-3">
 
-    <img src="boat-181-pro-4.jpg.png.jpg"
-         alt="boAt Airdopes 181 Pro">
+    <img src="boat-181-pro-4.jpg.png"
+         alt="boAt Airdopes 181 Pro"
+         id="boat-img-4">
 
   </div>
+
+
+  <div class="gallery-buttons">
+
+    <button onclick="showBoatImage(1)">1</button>
+    <button onclick="showBoatImage(2)">2</button>
+    <button onclick="showBoatImage(3)">3</button>
+    <button onclick="showBoatImage(4)">4</button>
+
+  </div>
+
 
   <h3>boAt Airdopes 181 Pro</h3>
 
@@ -293,7 +308,7 @@
 
   <p>
     <strong>Available Colours:</strong><br>
-    Brown • purple • teel green
+    Brown • Purple • Teal Green
   </p>
 
   <a
@@ -473,6 +488,11 @@ function showOnePlusImage(number) {
     .classList.add('active');
 
 }
+  document
+    .getElementById('boat-img-' + number)
+    .classList.add('active');
+
+  }
 
 </script>
 
@@ -480,3 +500,4 @@ function showOnePlusImage(number) {
 
 </body>
 </html>
+
