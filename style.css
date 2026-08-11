@@ -1,0 +1,25 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#f7f4ed;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.navbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:rgba(8,8,8,.9);backdrop-filter:blur(14px);border-bottom:1px solid #252525}
+.logo{font-size:22px;font-weight:800;letter-spacing:-.5px}.logo span{color:#d7b55b;font-weight:500}
+nav{display:flex;gap:28px;color:#c8c8c8;font-size:14px}nav a:hover{color:#d7b55b}
+.nav-btn,.btn{border:1px solid #d7b55b;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px}.nav-btn{color:#080808;background:#d7b55b}
+.hero{min-height:690px;padding:90px 7%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;background:radial-gradient(circle at 75% 45%,rgba(215,181,91,.15),transparent 35%),linear-gradient(135deg,#090909,#111)
+}
+.eyebrow{font-size:12px;letter-spacing:3px;color:#d7b55b;font-weight:800;margin-bottom:14px}
+h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-4px;margin-bottom:24px}h1 span,h2{color:#d7b55b}
+.hero-text{max-width:540px;color:#b8b8b8;font-size:18px;margin-bottom:32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.primary{background:#d7b55b;color:#080808}.secondary{background:#151515}
+.hero-card{height:420px;border:1px solid #2e2e2e;border-radius:36px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#181818,#0b0b0b);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.orb{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#d7b55b,transparent 65%);filter:blur(22px);opacity:.35}
+.product-placeholder{position:relative;width:240px;height:240px;border-radius:40px;display:grid;place-items:center;text-align:center;font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(145deg,#222,#0c0c0c);border:1px solid #555;transform:rotate(-8deg);box-shadow:0 30px 50px #000}
+.product-placeholder small{font-size:10px;letter-spacing:4px;color:#d7b55b}
+.section{padding:90px 7%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}h2{font-size:clamp(34px,5vw,52px);letter-spacing:-2px}.availability{color:#999;font-size:13px}
+.category-grid,.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.category-card,.product-card{background:#111;border:1px solid #292929;border-radius:22px;padding:28px;transition:.25s}.category-card:hover,.product-card:hover{transform:translateY(-5px);border-color:#d7b55b}
+.category-card{font-size:38px}.category-card h3{font-size:19px;margin-top:22px}.category-card p,.product-card p{color:#8f8f8f;font-size:13px}
+.product-grid{grid-template-columns:repeat(3,1fr)}.product-image{height:220px;border-radius:16px;background:linear-gradient(145deg,#202020,#0b0b0b);display:grid;place-items:center;font-size:70px;margin-bottom:20px}.product-card h3{font-size:20px;margin-bottom:5px}.product-card a{display:inline-block;color:#d7b55b;font-weight:700;margin-top:20px;font-size:14px}
+.cta{margin:20px 7% 90px;padding:70px 8%;text-align:center;border-radius:30px;border:1px solid #3a321f;background:radial-gradient(circle,#19150c,#0e0e0e)}.cta h2{max-width:760px;margin:0 auto 14px}.cta p:not(.eyebrow){color:#999;margin-bottom:28px}
+footer{padding:45px 7%;border-top:1px solid #222;display:grid;grid-template-columns:1fr 1fr;gap:20px;color:#888}footer .logo{color:#fff}.footer-contact{display:flex;justify-content:flex-end;gap:20px;flex-wrap:wrap}.footer-contact a:hover{color:#d7b55b}.copyright{grid-column:1/-1;font-size:12px;color:#555;margin-top:15px}
+@media(max-width:800px){nav{display:none}.navbar{padding:15px 5%}.nav-btn{padding:9px 13px}.hero{grid-template-columns:1fr;padding:65px 6%;min-height:auto}.hero-card{height:330px}.section{padding:65px 6%}.category-grid{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr}.section-head{align-items:start;gap:10px;flex-direction:column}.availability{font-size:12px}footer{grid-template-columns:1fr;padding:35px 6%}.footer-contact{justify-content:flex-start}.copyright{grid-column:auto}}
